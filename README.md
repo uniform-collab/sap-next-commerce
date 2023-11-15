@@ -1,4 +1,4 @@
-# Next.js Commerce enabled by Uniform
+# Next.js Commerce for SAP Commerce Cloud enabled by Uniform
 
 This starter is based on the latest Next.js Commerce template and built with Next.js 14 and App Router.
 
