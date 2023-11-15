@@ -13,14 +13,6 @@ module.exports = {
       }
     ]
   },
-  async rewrites() {
-    return [
-      {
-        source: '/medias/:path*',
-        destination: 'https://spartacus-demo.eastus.cloudapp.azure.com:8443/:path*',
-      },
-    ]
-  },
   async redirects() {
     return [
       {
