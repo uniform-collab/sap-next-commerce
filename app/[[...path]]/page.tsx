@@ -2,7 +2,11 @@ import { PageParameters, UniformComposition, retrieveRoute } from '@uniformdev/c
 import Footer from 'components/layout/footer';
 import { resolveComponent } from 'uniform/resolve';
 
+// Enabled edge runtime for the maximum oompf
 export const runtime = 'edge';
+
+// If you wanna go static, remove the runtime directive above and uncomment this line
+// export { generateStaticParams } from '@uniformdev/canvas-next-rsc';
 
 export const metadata = {
   description:

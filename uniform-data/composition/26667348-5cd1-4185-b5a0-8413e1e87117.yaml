@@ -7,6 +7,11 @@ composition:
     metaTitle:
       type: text
       value: Home
+    metaDescription:
+      type: text
+      value: >-
+        High-performance ecommerce store built with Next.js, Vercel, Uniform and
+        SAP Commerce Cloud.
   slots:
     content:
       - _id: c1c952b1-3985-4537-8bf9-d04b07a17be9
@@ -17,22 +22,24 @@ composition:
               type: $personalization
               slots:
                 pz:
-                  - _id: c8c76080-c904-4118-918d-03bea5688e22
+                  - _id: c40bb97b-7876-4d74-abf1-929bc83ee145
                     type: gridTileImage
-                    _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+                    _pattern: 40c7b179-7fb8-46e7-8f2c-5005b9e6b4cb
                     _dataResources:
-                      Product:
-                        type: product
+                      Single Product Content:
+                        type: singleProduct
                         variables:
-                          productIds: '88'
-                  - _id: 5480ecd7-34f4-430f-aa8d-e202bed9030a
+                          facetValues: '{}'
+                          productCodes: '816324'
+                  - _id: d8ad7414-0117-4921-9336-7d9f24925d41
                     type: gridTileImage
-                    _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+                    _pattern: 40c7b179-7fb8-46e7-8f2c-5005b9e6b4cb
                     _dataResources:
-                      Product:
-                        type: product
+                      Single Product Content:
+                        type: singleProduct
                         variables:
-                          productIds: '115'
+                          facetValues: '{"Brand":[""]}'
+                          productCodes: '816780'
               parameters:
                 count:
                   type: number
@@ -40,74 +47,92 @@ composition:
                 trackingEventName:
                   type: text
                   value: Home-Grid Tile Image
-            - _id: 676de7e3-c05c-4a67-a60e-1614fefaf748
+            - _id: aab26ec2-14f9-43dc-8805-2198c4af9825
               type: gridTileImage
-              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _pattern: 40c7b179-7fb8-46e7-8f2c-5005b9e6b4cb
               _dataResources:
-                Product:
-                  type: product
+                Single Product Content:
+                  type: singleProduct
                   variables:
-                    productIds: '81'
-            - _id: 841995cd-f02f-4427-a01e-6e4b840b6be2
+                    facetValues: '{}'
+                    productCodes: '1990255'
+            - _id: b8a231a3-7a42-4f64-96c6-047dc9c320b6
               type: gridTileImage
-              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _pattern: 40c7b179-7fb8-46e7-8f2c-5005b9e6b4cb
               _dataResources:
-                Product:
-                  type: product
+                Single Product Content:
+                  type: singleProduct
                   variables:
-                    productIds: '114'
+                    facetValues: '{}'
+                    productCodes: '479742'
         variant: ''
         parameters:
           title:
             type: text
             value: Featured Grid
-      - _id: ecb3c9bb-579e-4151-9eb6-cd577932ed35
+      - _id: 0dfca936-528a-4f93-965d-f05881a1b763
         type: productTileGrid
-        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
+        _pattern: d3b73267-3709-4f97-8ebb-41aeffba9047
         _dataResources:
-          Product Query:
-            type: productQuery
+          Dynamic Product List Content:
+            type: dynamicProductList
             variables:
-              page: '1'
-              limit: '5'
+              limit: '10'
               keyword: ''
-              sortField: price
-              categoryId: '27'
-              sortDirection: desc
-      - _id: 3ed05e29-262b-477f-8af0-ce9dcbb2903b
+              sortCode: topRated
+              categoryId: '571'
+              facetQuery: '{"Brand":[""]}'
+              facetValues: ''
+      - _id: 9d837c54-d546-41b2-b7c6-841d13b862f1
         type: productTileGrid
-        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
+        _pattern: d3b73267-3709-4f97-8ebb-41aeffba9047
         _dataResources:
-          Product Query:
-            type: productQuery
+          Dynamic Product List Content:
+            type: dynamicProductList
             variables:
-              page: '1'
-              limit: '5'
+              limit: '10'
               keyword: ''
-              sortField: price
-              categoryId: '24'
-              sortDirection: desc
+              sortCode: topRated
+              categoryId: '577'
+              facetQuery: '{}'
+              facetValues: ''
   _dataResources:
     Product Content:
       type: product
       variables:
         productIds: '115'
   _overrides:
-    3ed05e29-262b-477f-8af0-ce9dcbb2903b:
+    0dfca936-528a-4f93-965d-f05881a1b763:
       parameters:
         title:
           type: text
-          value: Our best espresso machine
-    5480ecd7-34f4-430f-aa8d-e202bed9030a:
+          value: Top rated cameras
+    9d837c54-d546-41b2-b7c6-841d13b862f1:
+      parameters:
+        title:
+          type: text
+          value: Bestselling web cams
+    aab26ec2-14f9-43dc-8805-2198c4af9825:
+      parameters:
+        full:
+          type: checkbox
+          value: null
+    b8a231a3-7a42-4f64-96c6-047dc9c320b6:
+      parameters:
+        image:
+          type: image
+          value: >-
+            ${#jptr:/Urls/imageHost}${#jptr:/Single Product
+            Content/products/0/images/0/url}
+    c40bb97b-7876-4d74-abf1-929bc83ee145:
       parameters:
         full:
           type: checkbox
           value: true
-    c8c76080-c904-4118-918d-03bea5688e22:
-      parameters:
-        full:
-          type: checkbox
-          value: true
+        image:
+          type: image
+          value: >-
+            https://res.cloudinary.com/uniform-demos/image/upload/v1700088725/sap/o9saaotmg58f4sprfdno.jpg
         $pzCrit:
           type: $pzCrit
           value:
@@ -115,12 +140,16 @@ composition:
               - l: hipsters
                 r: 0
                 op: '>'
-            name: 'Grid Tile Image: ${#jptr:/Product/0/name}'
-    ecb3c9bb-579e-4151-9eb6-cd577932ed35:
+            name: 'Grid Tile Image: ${#jptr:/Single Product Content/products/0/name}'
+    d8ad7414-0117-4921-9336-7d9f24925d41:
       parameters:
-        title:
-          type: text
-          value: Our best beans
-created: '2023-11-07T14:04:55.695592+00:00'
-modified: '2023-11-12T00:40:41.387706+00:00'
+        full:
+          type: checkbox
+          value: true
+        image:
+          type: image
+          value: >-
+            https://res.cloudinary.com/uniform-demos/image/upload/v1700088725/sap/pncjljo3hwdybkka0kod.jpg
+created: '2023-11-15T14:57:36.107663+00:00'
+modified: '2023-11-18T21:22:07.390221+00:00'
 pattern: false

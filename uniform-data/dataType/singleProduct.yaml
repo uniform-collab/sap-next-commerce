@@ -1,0 +1,43 @@
+id: singleProduct
+displayName: Single Product
+ttl: 30
+body: '{"codes":["${productCodes}"]}'
+path: /api/products
+custom:
+  imagePath: images.0.url
+  allowFacetNames:
+    - Stores
+    - Brand
+  allowCategoriesIds:
+    - '571'
+    - '577'
+method: POST
+purgeKey: 8d89a174-ac3a-4562-a5da-3437dd08f4bd
+archetype: singleProduct
+variables:
+  limit:
+    type: text
+    default: '5'
+    displayName: Limit
+  keyword:
+    type: text
+    default: ''
+    displayName: Keyword
+  sortCode:
+    type: text
+    default: ''
+    displayName: Sort Code
+  categoryId:
+    type: text
+    default: unknown
+    displayName: Category Id
+  facetValues:
+    type: text
+    default: ''
+    displayName: Facet Values
+  productCodes:
+    type: text
+    default: unknown
+    displayName: Product Codes
+dataSourceId: sapCommerceCloud
+allowedOnComponents: []

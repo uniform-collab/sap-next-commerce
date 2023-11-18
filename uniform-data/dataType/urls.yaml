@@ -1,0 +1,18 @@
+id: urls
+displayName: URLs
+ttl: 30
+body: ''
+path: /staticdata
+custom:
+  json:
+    imageHost: https://spartacus-demo.eastus.cloudapp.azure.com:8443
+  proposedName: JSON Data
+method: GET
+purgeKey: e651e19e-3e7b-46d6-9c4f-59e8144e4732
+archetype: staticData
+variables:
+  json:
+    type: text
+    default: ''
+dataSourceId: constants
+allowedOnComponents: []

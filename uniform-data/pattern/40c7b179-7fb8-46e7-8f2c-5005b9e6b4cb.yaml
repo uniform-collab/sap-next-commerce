@@ -1,0 +1,47 @@
+composition:
+  _name: SAP Product Grid Item
+  _id: 40c7b179-7fb8-46e7-8f2c-5005b9e6b4cb
+  type: gridTileImage
+  parameters:
+    url:
+      type: link
+      value:
+        path: /products/${#jptr:/Single Product Content/products/0/url}
+        type: url
+    name:
+      type: text
+      value: ${#jptr:/Single Product Content/products/0/name}
+    image:
+      type: image
+      value: >-
+        ${#jptr:/Urls/imageHost}${#jptr:/Single Product
+        Content/products/0/images/4/url}
+    price:
+      type: number
+      value: ${#jptr:/Single Product Content/products/0/price/value}
+  _dataResources:
+    Urls:
+      type: urls
+      variables: {}
+      isPatternParameter: false
+      ignorePatternParameterDefault: false
+    Single Product Content:
+      type: singleProduct
+      variables:
+        facetValues: '{}'
+        productCodes: '478828'
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      url: 'yes'
+      full: 'yes'
+      name: 'yes'
+      image: 'yes'
+      price: 'yes'
+created: '2023-11-15T18:12:37.581794+00:00'
+modified: '2023-11-15T22:37:02.075489+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1699752308/mqccnhksk5lme9u9n5kd.png
+categoryId: 4e552690-edb9-47a0-8a71-d5752a28365b

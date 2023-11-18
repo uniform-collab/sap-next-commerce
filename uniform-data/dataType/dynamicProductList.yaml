@@ -1,0 +1,44 @@
+id: dynamicProductList
+displayName: Dynamic Product List
+ttl: 30
+body: >-
+  {"query":"fields=FULL&query=${keyword}:${sortCode}:category:${categoryId}${facetValues}&pageSize=${limit}"}
+path: /api/products-search
+custom:
+  imagePath: images.0.url
+  allowFacetNames:
+    - Stores
+    - Brand
+  allowCategoriesIds:
+    - '571'
+    - '577'
+method: POST
+purgeKey: e08d0552-afb9-453d-9e6d-d2079f580e78
+archetype: queryProduct
+variables:
+  limit:
+    type: text
+    default: '5'
+    displayName: Limit
+  keyword:
+    type: text
+    default: ''
+    displayName: Keyword
+  sortCode:
+    type: text
+    default: ''
+    displayName: Sort Code
+  categoryId:
+    type: text
+    default: unknown
+    displayName: Category Id
+  facetValues:
+    type: text
+    default: ''
+    displayName: Facet Values
+  productCodes:
+    type: text
+    default: unknown
+    displayName: Product Codes
+dataSourceId: sapCommerceCloud
+allowedOnComponents: []

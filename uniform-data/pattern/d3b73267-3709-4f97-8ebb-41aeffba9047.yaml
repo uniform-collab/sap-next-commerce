@@ -1,0 +1,62 @@
+composition:
+  _name: SAP Product Collection
+  _id: d3b73267-3709-4f97-8ebb-41aeffba9047
+  type: productTileGrid
+  variant: carousel
+  parameters:
+    title:
+      type: text
+      value: SAP product collection
+  slots:
+    tiles:
+      - _id: 8cb3d74a-f674-418c-b354-0cf1fe132ff8
+        type: $loop
+        slots:
+          body:
+            - _id: 2c8b27b0-eb16-4130-9a43-6db72ca97fe4
+              type: gridTileImage
+              parameters:
+                name:
+                  type: text
+                  value: >-
+                    ${#jptr:/Dynamic Product List Content products Loop
+                    Item/name}
+                image:
+                  type: image
+                  value: >-
+                    ${#jptr:/URLs/imageHost}${#jptr:/Dynamic Product List
+                    Content products Loop Item/images/1/url}
+                price:
+                  type: number
+                  value: >-
+                    ${#jptr:/Dynamic Product List Content products Loop
+                    Item/price/value}
+        _dataResources:
+          Dynamic Product List Content products Loop Item:
+            type: sys-reserved-loop
+            variables:
+              connectedData: /Dynamic Product List Content/products
+  _dataResources:
+    URLs:
+      type: urls
+      variables: {}
+    Dynamic Product List Content:
+      type: dynamicProductList
+      variables:
+        limit: '5'
+        keyword: ''
+        sortCode: ''
+        categoryId: '571'
+        facetQuery: '{"Stores":[":availableInStores:Choshi"],"Brand":[":brand:brand_2"]}'
+        facetValues: ':availableInStores:Choshi:brand:brand_2'
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      title: 'yes'
+created: '2023-11-15T18:11:07.54079+00:00'
+modified: '2023-11-15T22:40:55.183869+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1699752148/ullsk97jt7bfk95myn9u.png
+categoryId: 4e552690-edb9-47a0-8a71-d5752a28365b
