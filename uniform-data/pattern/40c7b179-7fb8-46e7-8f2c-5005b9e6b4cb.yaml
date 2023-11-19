@@ -6,8 +6,12 @@ composition:
     url:
       type: link
       value:
-        path: /products/${#jptr:/Single Product Content/products/0/url}
-        type: url
+        path: /products/${#jptr:/Single Product Content/products/0/code}
+        type: projectMapNode
+        nodeId: 122fd330-7fa4-40b2-91a3-931afc3438a2
+        projectMapId: 8a35c419-5150-4f76-aa21-7e4976c9dfcb
+        dynamicInputValues:
+          product-id: ${#jptr:/Single Product Content/products/0/code}
     name:
       type: text
       value: ${#jptr:/Single Product Content/products/0/name}
@@ -40,7 +44,7 @@ composition:
       image: 'yes'
       price: 'yes'
 created: '2023-11-15T18:12:37.581794+00:00'
-modified: '2023-11-15T22:37:02.075489+00:00'
+modified: '2023-11-18T23:27:34.37617+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1699752308/mqccnhksk5lme9u9n5kd.png

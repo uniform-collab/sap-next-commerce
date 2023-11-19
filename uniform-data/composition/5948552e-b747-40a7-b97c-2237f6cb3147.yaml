@@ -1,0 +1,159 @@
+composition:
+  _name: Product Detail Page
+  _id: 5948552e-b747-40a7-b97c-2237f6cb3147
+  _slug: ':product-id'
+  type: productDetailPage
+  parameters:
+    metaTitle:
+      type: text
+      value: >-
+        ${#jptr:/Current Product/products/0/name} | ${#jptr:/Current
+        Product/products/0/categories/0/name} ${#jptr:/Current
+        Product/products/0/categories/1/name}
+  slots:
+    meta:
+      - _id: e7badd2c-a91b-4886-b9f5-c64f05f9d49c
+        type: jsonld
+        parameters:
+          name:
+            type: text
+            value: ${#jptr:/Current Product/products/0/name}
+          type:
+            type: select
+            value: Product
+          image:
+            type: image
+            value: >-
+              ${#jptr:/URLs/imageHost}${#jptr:/Current
+              Product/products/0/images/0/url}
+          lowPrice:
+            type: number
+            value: ${#jptr:/Current Product/products/0/price/value}
+          highPrice:
+            type: number
+            value: ${#jptr:/Current Product/products/0/price/value}
+          description:
+            type: text
+            value: ${#jptr:/Current Product/products/0/summary}
+          availability:
+            type: checkbox
+            value: ${#jptr:/Current Product/products/0/purchasable}
+          priceCurrency:
+            type: select
+            value: USD
+    lowerRail:
+      - _id: 7b36d328-9263-49b5-a2e3-3b098ea5e9ab
+        type: productTileGrid
+        _pattern: d3b73267-3709-4f97-8ebb-41aeffba9047
+        _dataResources:
+          Dynamic Product List Content:
+            type: dynamicProductList
+            variables:
+              limit: '5'
+              keyword: ''
+              sortCode: ''
+              categoryId: '571'
+              facetQuery: '{"Stores":[":availableInStores:Choshi"]}'
+              facetValues: ':availableInStores:Choshi'
+    leftContent:
+      - _id: 46c6f9f6-85d6-46c8-917d-913e88fa9046
+        type: gallery
+        parameters:
+          images:
+            type: $block
+            value:
+              - _id: e690d703-e1ac-4beb-bdab-849ae4af8c2f
+                type: $loop
+                fields:
+                  body:
+                    type: $block
+                    value:
+                      - _id: e01f908a-de78-4d80-9048-9d702b3c399b
+                        type: productImage
+                        fields:
+                          src:
+                            type: image
+                            value: >-
+                              ${#jptr:/URLs/imageHost}${#jptr:/Current Product
+                              images Loop Item/url}
+                          type:
+                            type: text
+                            value: ${#jptr:/Current Product images Loop Item/format}
+                          altText:
+                            type: text
+                            value: ${#jptr:/Current Product/products/0/name}
+                _dataResources:
+                  Current Product images Loop Item:
+                    type: sys-reserved-loop
+                    variables:
+                      connectedData: /Current Product/products/0/images
+    rightContent:
+      - _id: ae57b285-bd91-40a0-92f6-2db7eba8b7cd
+        type: productDescription
+        parameters:
+          price:
+            type: number
+            value: ${#jptr:/Current Product/products/0/price/value}
+          title:
+            type: text
+            value: ${#jptr:/Current Product/products/0/name}
+          currency:
+            type: select
+            value: USD
+          variants:
+            type: $block
+            value:
+              - _id: 7ac0c1d0-59de-4e0c-8ad4-8799d5388d2a
+                type: $loop
+                fields:
+                  body:
+                    type: $block
+                    value:
+                      - _id: 4de22194-992e-425c-807a-b410b1d369e4
+                        type: productVariant
+                        fields:
+                          id:
+                            type: text
+                            value: ${#jptr:/Current Product products Loop Item/code}
+                          price:
+                            type: number
+                            value: >-
+                              ${#jptr:/Current Product products Loop
+                              Item/price/value}
+                          title:
+                            type: text
+                            value: ${#jptr:/Current Product products Loop Item/name}
+                          availableForSale:
+                            type: checkbox
+                            value: >-
+                              ${#jptr:/Current Product products Loop
+                              Item/purchasable}
+                _dataResources:
+                  Current Product products Loop Item:
+                    type: sys-reserved-loop
+                    variables:
+                      connectedData: /Current Product/products
+          description:
+            type: text
+            value: ${#jptr:/Current Product/products/0/description}
+          availableForSale:
+            type: checkbox
+            value: ${#jptr:/Current Product/products/0/purchasable}
+  _dataResources:
+    URLs:
+      type: urls
+      variables: {}
+    Current Product:
+      type: singleProduct
+      variables:
+        facetValues: '{}'
+        productCodes: ${product-id}
+  _overrides:
+    7b36d328-9263-49b5-a2e3-3b098ea5e9ab:
+      parameters:
+        title:
+          type: text
+          value: Recommended products
+created: '2023-11-18T22:28:45.391318+00:00'
+modified: '2023-11-19T00:15:33.578445+00:00'
+pattern: false

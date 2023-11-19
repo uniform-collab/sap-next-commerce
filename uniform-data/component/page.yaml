@@ -25,6 +25,7 @@ slots:
       - $test
       - $personalization
       - productTileGrid
+      - hero
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
@@ -36,4 +37,4 @@ slugSettings:
 titleParameter: metaTitle
 canBeComposition: true
 created: '2023-11-15T14:57:32.131186+00:00'
-updated: '2023-11-15T22:59:21.479623+00:00'
+updated: '2023-11-18T21:39:04.00253+00:00'

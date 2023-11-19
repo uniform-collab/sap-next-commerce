@@ -16,6 +16,19 @@ composition:
             - _id: 2c8b27b0-eb16-4130-9a43-6db72ca97fe4
               type: gridTileImage
               parameters:
+                url:
+                  type: link
+                  value:
+                    path: >-
+                      /products/${#jptr:/Dynamic Product List Content products
+                      Loop Item/code}
+                    type: projectMapNode
+                    nodeId: 122fd330-7fa4-40b2-91a3-931afc3438a2
+                    projectMapId: 8a35c419-5150-4f76-aa21-7e4976c9dfcb
+                    dynamicInputValues:
+                      product-id: >-
+                        ${#jptr:/Dynamic Product List Content products Loop
+                        Item/code}
                 name:
                   type: text
                   value: >-
@@ -55,7 +68,7 @@ composition:
     parameters:
       title: 'yes'
 created: '2023-11-15T18:11:07.54079+00:00'
-modified: '2023-11-15T22:40:55.183869+00:00'
+modified: '2023-11-18T23:27:04.107802+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1699752148/ullsk97jt7bfk95myn9u.png

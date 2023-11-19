@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: productDetailPage
+name: Product Detail Page
+icon: shopping-bag
+parameters:
+  - id: metaTitle
+    name: Meta Title
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: metaDescription
+    name: Meta Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: 5
+categoryId: 4e552690-edb9-47a0-8a71-d5752a28365b
+useTeamPermissions: true
+slots:
+  - id: meta
+    name: Meta
+    allowedComponents:
+      - jsonld
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: leftContent
+    name: Left Content
+    allowedComponents:
+      - $test
+      - $personalization
+      - productDescription
+      - gallery
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: rightContent
+    name: Right Content
+    allowedComponents:
+      - gallery
+      - $test
+      - $personalization
+      - productDescription
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: lowerRail
+    name: Lower Rail
+    allowedComponents:
+      - $p:d3b73267-3709-4f97-8ebb-41aeffba9047
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+titleParameter: metaTitle
+canBeComposition: true
+created: '2023-11-18T22:14:54.093166+00:00'
+updated: '2023-11-19T00:06:55.852867+00:00'
