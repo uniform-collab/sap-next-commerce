@@ -1,83 +1,94 @@
 composition:
-  _name: Coffee Machines
+  _name: Cameras
   _id: bf4193ba-68af-48ff-b8de-6a039a0cbdb8
-  _slug: espresso-machines
+  _slug: cameras
   type: page
   parameters:
     metaTitle:
       type: text
-      value: Espresso Machines
+      value: Cameras
   slots:
+    footer:
+      - _id: 1990e3fc-f62d-4e80-9248-b4f52a53ae81
+        type: footer
+        _pattern: 63c9777f-621a-4be9-a61f-09b10b63db92
+    header:
+      - _id: dd5c414d-de3e-4904-8f54-bfe6f6094119
+        type: navBar
+        _pattern: e6ed413a-f24e-4be1-aff4-5669be40e960
     content:
       - _id: 50e0a79f-7ce0-4a3b-85f2-5abb9ed92b37
         type: productTileGrid
         slots:
           tiles:
-            - _id: 3ffd9ee0-5cc9-4ae2-ba6b-3ff847e9bb2d
+            - _id: e2e35577-805e-451e-adcc-b59faa8639c5
               type: gridTileImage
-              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _pattern: 40c7b179-7fb8-46e7-8f2c-5005b9e6b4cb
               _dataResources:
-                Product:
-                  type: product
+                Single Product Content:
+                  type: singleProduct
                   variables:
-                    productIds: '117'
-            - _id: 3a3fa415-abb0-4c62-b8dc-6b9573c4180a
+                    facetValues: '{}'
+                    productCodes: '816780'
+            - _id: 8a29ea4b-8c8e-4d4d-aec1-b7b354da85ba
               type: gridTileImage
-              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _pattern: 40c7b179-7fb8-46e7-8f2c-5005b9e6b4cb
               _dataResources:
-                Product:
-                  type: product
+                Single Product Content:
+                  type: singleProduct
                   variables:
-                    productIds: '118'
-            - _id: 8a2d09ed-d78c-41eb-aa72-4424a19d7d30
+                    facetValues: '{}'
+                    productCodes: '553637'
+            - _id: 06fd6f58-f312-4c78-9f41-108df25abdda
               type: gridTileImage
-              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _pattern: 40c7b179-7fb8-46e7-8f2c-5005b9e6b4cb
               _dataResources:
-                Product:
-                  type: product
+                Single Product Content:
+                  type: singleProduct
                   variables:
-                    productIds: '145'
+                    facetValues: '{}'
+                    productCodes: '358639'
         parameters:
           title:
             type: text
             value: Featured Machines
-      - _id: 8e7952a3-ad03-4294-ad0c-48da75a023d3
+      - _id: c349a32c-4e58-4124-a9a0-d545fc9e489c
         type: productTileGrid
-        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
+        _pattern: d3b73267-3709-4f97-8ebb-41aeffba9047
         _dataResources:
-          Product Query:
-            type: productQuery
+          Dynamic Product List Content:
+            type: dynamicProductList
             variables:
-              page: '1'
+              limit: '5'
+              keyword: Sony
+              sortCode: ''
+              categoryId: '571'
+              facetQuery: '{}'
+              facetValues: ''
+      - _id: 7ba20a60-05a8-4797-8ac3-eedd90eb9496
+        type: productTileGrid
+        _pattern: d3b73267-3709-4f97-8ebb-41aeffba9047
+        _dataResources:
+          Dynamic Product List Content:
+            type: dynamicProductList
+            variables:
               limit: '5'
               keyword: ''
-              sortField: price
-              categoryId: '23'
-              sortDirection: asc
-      - _id: c8f6187f-7603-46a3-ab25-6989ca396620
-        type: productTileGrid
-        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
-        _dataResources:
-          Product Query:
-            type: productQuery
-            variables:
-              page: '1'
-              limit: '5'
-              keyword: ''
-              sortField: price
-              categoryId: '23'
-              sortDirection: desc
+              sortCode: ''
+              categoryId: '571'
+              facetQuery: '{"Brand":[":brand:brand_2"]}'
+              facetValues: ':brand:brand_2'
   _overrides:
-    8e7952a3-ad03-4294-ad0c-48da75a023d3:
+    7ba20a60-05a8-4797-8ac3-eedd90eb9496:
       parameters:
         title:
           type: text
-          value: Most affordable way to make coffee
-    c8f6187f-7603-46a3-ab25-6989ca396620:
+          value: Toshiba Cameras
+    c349a32c-4e58-4124-a9a0-d545fc9e489c:
       parameters:
         title:
           type: text
-          value: If budget is not an issue
-created: '2023-11-12T01:28:43.005139+00:00'
-modified: '2023-11-12T01:38:24.412068+00:00'
+          value: Sony Cameras
+created: '2023-11-15T14:57:36.396579+00:00'
+modified: '2023-11-19T01:40:45.686283+00:00'
 pattern: false

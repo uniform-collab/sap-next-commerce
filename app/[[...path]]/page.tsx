@@ -1,5 +1,4 @@
 import { PageParameters, UniformComposition, retrieveRoute } from '@uniformdev/canvas-next-rsc';
-import Footer from 'components/layout/footer';
 import { resolveComponent } from 'uniform/resolve';
 
 // Enabled edge runtime for the maximum oompf
@@ -19,14 +18,11 @@ export const metadata = {
 export default async function HomePage(props: PageParameters) {
   const route = await retrieveRoute(props);
   return (
-    <>
-      <UniformComposition
-        {...props}
-        route={route}
-        resolveComponent={resolveComponent}
-        mode="server"
-      />
-      <Footer />
-    </>
+    <UniformComposition
+      {...props}
+      route={route}
+      resolveComponent={resolveComponent}
+      mode="server"
+    />
   );
 }

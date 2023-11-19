@@ -9,3 +9,5 @@ export { productDetailPageMapping } from '../components/uniform/product-detail-p
 export { productDescriptionMapping } from '../components/uniform/product-description/mapping';
 export { galleryMapping } from '../components/uniform/gallery/mapping';
 export { jsonldMapping } from '../components/uniform/jsonld/mapping';
+export { navBarMapping } from '../components/uniform/navbar/mapping';
+export { footerMapping } from '../components/uniform/footer/mapping';

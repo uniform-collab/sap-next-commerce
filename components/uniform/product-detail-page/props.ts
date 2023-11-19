@@ -3,4 +3,4 @@ export type Parameters = {
   metaDescription: string;
 };
 
-export type Slots = 'leftContent' | 'rightContent' | 'lowerRail' | 'meta';
+export type Slots = 'leftContent' | 'rightContent' | 'lowerRail' | 'header' | 'footer';

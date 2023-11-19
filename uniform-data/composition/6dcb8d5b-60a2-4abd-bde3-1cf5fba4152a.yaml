@@ -1,65 +1,76 @@
 composition:
-  _name: Coffee Beans
+  _name: Webcams
   _id: 6dcb8d5b-60a2-4abd-bde3-1cf5fba4152a
   _slug: coffee-beans
   type: page
   parameters:
     metaTitle:
       type: text
-      value: Coffee Beans
+      value: Webcams
   slots:
+    footer:
+      - _id: 738c2b81-3c9e-406b-9a3b-4fb439c0fb39
+        type: footer
+        _pattern: 63c9777f-621a-4be9-a61f-09b10b63db92
+    header:
+      - _id: ddb6c3da-d282-4749-a56a-a6d239aa8e0d
+        type: navBar
+        _pattern: e6ed413a-f24e-4be1-aff4-5669be40e960
     content:
       - _id: 75fc8912-8b3b-407a-881b-5a32606ab39f
         type: productTileGrid
         slots:
           tiles:
-            - _id: b0c0b1cc-95d3-42a9-8cb0-be31b327704e
+            - _id: 0f2a28bb-d31d-4547-95d9-939f6cad55da
               type: gridTileImage
-              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _pattern: 40c7b179-7fb8-46e7-8f2c-5005b9e6b4cb
               _dataResources:
-                Product:
-                  type: product
+                Single Product Content:
+                  type: singleProduct
                   variables:
-                    productIds: '81'
-            - _id: 5a202886-6684-48a1-9793-15b36f8110c4
+                    facetValues: '{}'
+                    productCodes: '479742'
+            - _id: 296954e0-c968-445b-bd3d-df08c9a9f8e6
               type: gridTileImage
-              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _pattern: 40c7b179-7fb8-46e7-8f2c-5005b9e6b4cb
               _dataResources:
-                Product:
-                  type: product
+                Single Product Content:
+                  type: singleProduct
                   variables:
-                    productIds: '128'
-            - _id: 23f3b557-f847-45be-aa58-f7ed8968be23
+                    facetValues: '{}'
+                    productCodes: '1377492'
+            - _id: 032af61d-0d18-4452-99dc-c3e1b04b052b
               type: gridTileImage
-              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _pattern: 40c7b179-7fb8-46e7-8f2c-5005b9e6b4cb
               _dataResources:
-                Product:
-                  type: product
+                Single Product Content:
+                  type: singleProduct
                   variables:
-                    productIds: '113'
+                    facetValues: '{}'
+                    productCodes: '458542'
         parameters:
           title:
             type: text
             value: Featured Beans
-      - _id: 7ddb4278-f9b4-4ac3-9a54-fe64e68a8888
+      - _id: dad69b04-34a5-4a6b-822c-7b3a4c059702
         type: productTileGrid
-        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
+        _pattern: d3b73267-3709-4f97-8ebb-41aeffba9047
         _dataResources:
-          Product Query:
-            type: productQuery
+          Dynamic Product List Content:
+            type: dynamicProductList
             variables:
-              page: '1'
               limit: '5'
               keyword: ''
-              sortField: price
-              categoryId: '27'
-              sortDirection: desc
+              sortCode: topRated
+              categoryId: '577'
+              facetQuery: '{"Brand":[""]}'
+              facetValues: ''
   _overrides:
-    7ddb4278-f9b4-4ac3-9a54-fe64e68a8888:
+    dad69b04-34a5-4a6b-822c-7b3a4c059702:
       parameters:
         title:
           type: text
-          value: Beans for the exquisite taste
-created: '2023-11-12T01:27:21.333072+00:00'
-modified: '2023-11-12T01:40:25.746477+00:00'
+          value: Top rated webcams
+created: '2023-11-15T14:57:36.167185+00:00'
+modified: '2023-11-19T01:40:37.545892+00:00'
 pattern: false

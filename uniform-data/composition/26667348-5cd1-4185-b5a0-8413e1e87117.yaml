@@ -13,6 +13,14 @@ composition:
         High-performance ecommerce store built with Next.js, Vercel, Uniform and
         SAP Commerce Cloud.
   slots:
+    footer:
+      - _id: 53e3d3fe-b382-4607-b551-d7a759b3811d
+        type: footer
+        _pattern: 63c9777f-621a-4be9-a61f-09b10b63db92
+    header:
+      - _id: 60732154-8dc0-4d03-8149-2c07550960ad
+        type: navBar
+        _pattern: e6ed413a-f24e-4be1-aff4-5669be40e960
     content:
       - _id: c1c952b1-3985-4537-8bf9-d04b07a17be9
         type: productTileGrid
@@ -151,5 +159,5 @@ composition:
           value: >-
             https://res.cloudinary.com/uniform-demos/image/upload/v1700088725/sap/pncjljo3hwdybkka0kod.jpg
 created: '2023-11-15T14:57:36.107663+00:00'
-modified: '2023-11-18T21:22:07.390221+00:00'
+modified: '2023-11-19T01:20:25.621342+00:00'
 pattern: false

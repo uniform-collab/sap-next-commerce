@@ -11,8 +11,15 @@ composition:
         Product/products/0/categories/0/name} ${#jptr:/Current
         Product/products/0/categories/1/name}
   slots:
-    meta:
-      - _id: e7badd2c-a91b-4886-b9f5-c64f05f9d49c
+    footer:
+      - _id: 2b5e19c3-a35b-4957-8795-b994cb4b611d
+        type: footer
+        _pattern: 63c9777f-621a-4be9-a61f-09b10b63db92
+    header:
+      - _id: ace0724b-b0fa-48b6-b6e4-329270890919
+        type: navBar
+        _pattern: e6ed413a-f24e-4be1-aff4-5669be40e960
+      - _id: 0cd9787f-5290-4209-aba6-6e7f2af557ed
         type: jsonld
         parameters:
           name:
@@ -155,5 +162,5 @@ composition:
           type: text
           value: Recommended products
 created: '2023-11-18T22:28:45.391318+00:00'
-modified: '2023-11-19T00:15:33.578445+00:00'
+modified: '2023-11-19T01:39:17.281637+00:00'
 pattern: false

@@ -8,17 +8,19 @@ Experience edge personalization [here](https://sap-next-commerce.vercel.app/?utm
 
 In addition to the goodness Next.js Commerce provides, this starter provides the following benefits for marketers and merchandisers:
 
-- Visual in-line editing of content in Uniform
+- Visual in-line editing of content in Uniform including PDPs
 - Dynamic page layout control without code
 - Integrated edge personalization and A/B testing
 - Dynamic route control without code (including Product Detail Pages)
 - Ability to connect to a couple of dozen Headless CMS and Commerce catalog APIs, full list [here](https://docs.uniform.app/docs/integrations).
+- Dynamic site navigation control (top and footer nav)
 
-## TODO
+## Roadmap
 
-- [ ] Wire up product detail and category pages
-- [ ] Wire up checkout
+- [x] Wire up product detail and category pages
 - [ ] Wire up search
+- [ ] Wire up checkout
+- [ ] Wire up content pages
 
 ## Docs & Resources
 

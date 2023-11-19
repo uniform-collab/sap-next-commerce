@@ -1,0 +1,29 @@
+asset:
+  type: image
+  _id: aa5f56dd-73e8-4186-8682-3d14309a64cb
+  _name: ''
+  title:
+    type: text
+    value: Uniform_Icon_White_uceyub-(2).svg
+  file:
+    type: file
+    value: 95acac34-2e14-469a-b25f-f8da967564ca
+  mediaType:
+    value: image/svg+xml
+    type: text
+  url:
+    value: >-
+      https://img.uniform.global/p/hDbcapyZRbaodHUloPwpHg/EvBUV_kETO-zj2JY0R66CA-Uniform_Icon_White_uceyub-(2).svg
+    type: text
+  size:
+    value: 826
+    type: number
+  width:
+    value: 150
+    type: number
+  height:
+    value: 150
+    type: number
+  custom: {}
+created: '2023-11-19T00:39:19.410544+00:00'
+modified: '2023-11-19T00:39:19.410544+00:00'
